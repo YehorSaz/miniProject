@@ -58,7 +58,7 @@ button.onclick = function () {
             button.innerText = 'Details';
 
             button.addEventListener('click', function () {
-                window.location.href = 'pages/post-details.html?postID=' + posts[item].id;
+                window.location.href = 'https://yehorsaz.github.io/miniProject/pages/post-details.html?postID=' + posts[item].id;
             });
 
             titleDiv.appendChild(button);
@@ -68,5 +68,5 @@ button.onclick = function () {
 }
 const buttonHome = document.getElementById('home');
 buttonHome.onclick = function () {
-    window.location.href = 'index.html';
+    window.location.href = 'https://yehorsaz.github.io/miniProject/index.html';
 }

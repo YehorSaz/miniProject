@@ -62,5 +62,5 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
 
 const buttonHome = document.getElementById('home');
 buttonHome.onclick = function () {
-    window.location.href = 'index.html';
+    window.location.href = 'https://yehorsaz.github.io/miniProject/index.html';
 }
