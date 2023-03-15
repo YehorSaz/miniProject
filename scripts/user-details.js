@@ -58,7 +58,7 @@ button.onclick = function () {
             button.innerText = 'Details';
 
             button.addEventListener('click', function () {
-                window.location.href = 'post-details.html?postID=' + posts[item].id;
+                window.location.href = 'pages/post-details.html?postID=' + posts[item].id;
             });
 
             titleDiv.appendChild(button);
