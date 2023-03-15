@@ -19,7 +19,7 @@ fetch(url)
             button.innerText = 'More info';
 
             button.addEventListener('click', function () {
-                window.location.href = 'pages/user-details.html?data=' + JSON.stringify(user);
+                window.open('pages/user-details.html?data=' + JSON.stringify(user), '_self');
             });
 
             usersDiv.appendChild(button);
