@@ -218,22 +218,9 @@ li {
     box-shadow: 5px 5px 10px black;
     border-radius: 3px;
     font-style: oblique;
-    font-size: 20px;
+    font-size: 18px;
     height: 100px;
     color: #16384D;
-    transition: height .5s ease 0s,
-    transform .5s .5s,
-    z-index .5s;
-    overflow: hidden;
-}
-
-.comments-li:hover {
-    position: relative;
-    height: 35vh;
-    z-index: 10;
-    transform: scale(1.1);
-    transition: transform .6s,
-    height .5s .3s;
 }
 
 #comments {
@@ -313,39 +300,110 @@ p {
     margin-right: 10px;
 }
 
+@media screen and (min-width: 475px){
+
+    .comments-li {
+        transition: height .5s ease 0s,
+        transform .5s .5s,
+        z-index .5s;
+        overflow: hidden;
+    }
+
+    .comments-li:hover {
+        position: relative;
+        height: 35vh;
+        z-index: 10;
+        transform: scale(1.1);
+        transition: transform .6s,
+        height .5s .3s;
+    }
+}
+
 @media screen and (min-width: 0) and (max-width: 768px) {
+
+    .comments-ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .button-details, .button-info {
+        font-size: 150%;
+    }
+
+    .home {
+        width: 15%;
+    }
+    .button-details {
+        font-size: 100%;
+    }
+
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
 
     .wrapper {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .button-info {
         width: 100%;
         height: 30%;
     }
+
     .users-div {
+        width: 90%;
         min-width: 184px;
     }
 }
-@media screen and (min-width: 0) and (max-width: 1155px) {
+
+@media screen and (min-width: 769px) and (max-width: 1155px) {
+
+    .users-div {
+        min-width: 270px;
+    }
+
     .posts, .comments-ul {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .comments-li:hover {
+        height: 40vh;
+    }
+
     .home {
         width: 15%;
     }
 }
-@media screen and (min-width: 0) and (max-width: 705px) {
+
+@media screen and (min-width: 476px) and (max-width: 705px) {
+
+    .button-info {
+        font-size: 150%;
+    }
+
     .posts, .comments-ul {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .comments-li:hover {
+        height: 40vh;
+    }
+
     .users-div {
         width: 90%;
     }
 }
+
 @media screen and (min-width: 0) and (max-width: 475px) {
-    .posts, .comments-ul {
-        grid-template-columns: repeat(1, 1fr);
+
+    .img {
+        display: none;
     }
+
+    .posts, .comments-ul {
+        display: flex;
+        flex-direction: column;
+    }
+
     .home {
         position: fixed;
         top: 1px;
@@ -353,12 +411,19 @@ p {
         height: 5vh;
         font-size: 170%;
     }
+
     .users-div {
         width: 90%;
     }
-    .comments-li:hover {
-        max-height: 90vh;
+
+    .comments-li {
+        height: 100%;
     }
+
+    .comments-ul {
+        grid-auto-rows: minmax(100px, 45vh);
+    }
+
     .button-details, .button-info {
         width: 100%;
         height: 35%;
