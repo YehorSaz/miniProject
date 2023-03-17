@@ -42,7 +42,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
         for (const item in comments) {
 
             const commLi = document.createElement('li');
-            commLi.classList.add('comments-li');
+            commLi.classList.add('comments-li', 'comments-li-translate');
             commLi.innerHTML = `<img class="img" src="../images/pngwing.png" alt="icon">`
 
             for (const i in comments[item]) {
