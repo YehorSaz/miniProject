@@ -463,7 +463,9 @@ p {
     }
 
     .button-details, .button-info {
-        width: 100%;
+        align-self: center;
+        width: 90%;
+        min-width: 260px;
         height: 35%;
         font-size: 150%;
     }
