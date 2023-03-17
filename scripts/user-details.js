@@ -8,29 +8,29 @@ const button = document.getElementById('button-user-posts');
 
 function flatter(object) {
 
-    for (const data in object) {
+    for (const key in object) {
 
-        if (typeof object[data] === 'object') {
+        if (typeof object[key] === 'object') {
 
             const div1 = document.createElement('div');
             div1.classList.add('div1');
 
-            let newData = data[0].toUpperCase() + data.slice(1);
+            let newKey = key[0].toUpperCase() + key.slice(1);
 
-            div1.innerText += `${newData}:`;
+            div1.innerText = `${newKey}:`;
 
             container.appendChild(div1);
 
-            flatter(object[data]);
+            flatter(object[key]);
 
         } else {
 
             const div = document.createElement('div');
             div.classList.add('data');
 
-            let newData = data[0].toUpperCase() + data.slice(1);
+            let newKey = key[0].toUpperCase() + key.slice(1);
 
-            div.innerHTML = `<div class="key">${newData}:</div> <div class="value">${object[data]}</div>`;
+            div.innerHTML = `<div class="key">${newKey}:</div> <div class="value">${object[key]}</div>`;
 
             container.appendChild(div);
         }
