@@ -5,15 +5,10 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 70%;
     padding-top: 50px;
+    margin: 0 auto;
     place-items: center;
-}
-
-.users-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 100vh;
 }
 
 .left-container {
@@ -28,8 +23,8 @@ body {
 
 .users-div {
     align-self: center;
-    min-width: 195px;
-    width: 60%;
+    min-width: 320px;
+    width: 70%;
     height: 14vh;
     background: linear-gradient(0deg, rgba(222, 167, 115, 0.85) 10%, rgba(241, 163, 72, 0.85) 100%);
     margin: 10px;
@@ -379,6 +374,10 @@ p {
 
 @media screen and (min-width: 769px) and (max-width: 1155px) {
 
+    .wrapper {
+        width: 90%;
+    }
+
     .users-div {
         min-width: 320px;
     }
@@ -427,7 +426,9 @@ p {
 
 @media screen and (min-width: 0) and (max-width: 475px) {
 
-
+    .wrapper {
+        width: 90%;
+    }
 
     .img {
         display: none;
