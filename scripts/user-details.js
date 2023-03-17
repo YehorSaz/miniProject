@@ -65,6 +65,10 @@ button.onclick = function () {
             postTitle.appendChild(titleDiv);
         }
     });
+
+    container.classList.remove('container');
+    container.classList.add('new-container');
+
 }
 const buttonHome = document.getElementById('home');
 buttonHome.onclick = function () {

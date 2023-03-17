@@ -66,7 +66,6 @@ body {
 }
 
 h2 {
-    align-self: center;
     color: #16384D;
 }
 
@@ -90,6 +89,22 @@ h2 {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
+
+.new-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    width: 90%;
+    height: 30vh;
+    background: linear-gradient(188deg, rgba(250, 170, 87, 0.99) 0%, rgb(208, 157, 107) 100%);
+    box-shadow: 5px 5px 10px black;
+    border-radius: 3px;
+    align-self: center;
+    margin-bottom: 20px;
+    font-size: 100%;
+}
+
 
 #button-user-posts {
     align-self: center;
@@ -365,7 +380,7 @@ p {
 @media screen and (min-width: 769px) and (max-width: 1155px) {
 
     .users-div {
-        min-width: 270px;
+        min-width: 320px;
     }
 
     .posts {
@@ -412,6 +427,8 @@ p {
 
 @media screen and (min-width: 0) and (max-width: 475px) {
 
+
+
     .img {
         display: none;
     }
@@ -431,6 +448,10 @@ p {
 
     .users-div {
         width: 90%;
+    }
+
+    .users-div:hover {
+        transform: none;
     }
 
     .comments-li {
