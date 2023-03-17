@@ -316,7 +316,6 @@ p {
         transform: matrix(1.1, 0, 0, 1.5, 0, -70);
         transition: transform .6s,
         height .5s .3s;
-        /*overflow: auto;*/
         font-size: 80%;
     }
 
