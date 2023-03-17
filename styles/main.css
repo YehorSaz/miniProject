@@ -448,6 +448,7 @@ p {
 
     .users-div {
         width: 90%;
+        font-size: 90%;
     }
 
     .users-div:hover {
